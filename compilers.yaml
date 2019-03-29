@@ -1,0 +1,27 @@
+compilers:
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: centos7
+    paths:
+      cc: /gpfs/u/software/erp-spack-install/linux-centos7-x86_64/gcc-centos7_4.8.5/gcc-7.4.0-vuvgy2j4tdvzqs3zij73m7oqojd7owdj/bin/gcc
+      cxx: /gpfs/u/software/erp-spack-install/linux-centos7-x86_64/gcc-centos7_4.8.5/gcc-7.4.0-vuvgy2j4tdvzqs3zij73m7oqojd7owdj/bin/g++
+      f77: /gpfs/u/software/erp-spack-install/linux-centos7-x86_64/gcc-centos7_4.8.5/gcc-7.4.0-vuvgy2j4tdvzqs3zij73m7oqojd7owdj/bin/gfortran
+      fc: /gpfs/u/software/erp-spack-install/linux-centos7-x86_64/gcc-centos7_4.8.5/gcc-7.4.0-vuvgy2j4tdvzqs3zij73m7oqojd7owdj/bin/gfortran
+    spec: gcc@7.4.0
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: centos7
+    paths:
+      cc: /usr/bin/gcc
+      cxx: /usr/bin/g++
+      f77:
+      fc:
+    spec: gcc@centos7_4.8.5
+    target: x86_64

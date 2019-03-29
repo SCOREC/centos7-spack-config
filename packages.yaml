@@ -1,0 +1,60 @@
+# -------------------------------------------------------------------------
+# This file controls default concretization preferences for Spack.
+#
+# Settings here are versioned with Spack and are intended to provide
+# sensible defaults out of the box. Spack maintainers should edit this
+# file to keep it current.
+#
+# Users can override these settings by editing the following files.
+#
+# Per-spack-instance settings (overrides defaults):
+#   $SPACK_ROOT/etc/spack/packages.yaml
+#
+# Per-user settings (overrides default and site settings):
+#   ~/.spack/packages.yaml
+# -------------------------------------------------------------------------
+packages:
+  all:
+    compiler: [gcc, intel]
+    providers:
+      mpi: [mpich]
+  python:
+    paths:
+      python@2.7.5: /usr
+    buildable: False
+  perl:
+    paths:
+      perl@5.16.3: /usr
+      buildable: False
+  xz:
+    paths:
+      xz@system: /usr
+      buildable: False
+  tar:
+    paths:
+      tar@system: /usr
+      buildable: False
+  autoconf:
+    paths:
+      autoconf@system: /usr
+      buildable: False
+  automake:
+    paths:
+      automake@system: /usr
+      buildable: False
+  m4:
+    paths:
+      m4@1.4.16: /usr
+      buildable: False
+  lua:
+    paths:
+      lua@5.1.4: /usr
+      buildable: False
+  bzip2:
+    paths:
+      bzip2@1.0.6: /usr
+      buildable: False
+  slurm:
+    paths:
+      slurm@17.02.11: /usr
+      buildable: False
