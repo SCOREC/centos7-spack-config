@@ -40,7 +40,7 @@ modules:
     simmetrix-simmodsuite:
       environment:
         set:
-          'SIM_LICENSE_FILE': '/net/common/meshSim/license/license.txt'
+          'SIM_LICENSE_FILE': '/gpfs/u/software/amd64-rhel6/simmetrix/license/license.txt'
     pumi:
       suffixes:
         '^metis+int64': int64
@@ -82,6 +82,8 @@ modules:
         '+fortran': ftn
       autoload: 'all'
     netcdf:
+      autoload: 'all'
+    netcdf-cxx4:
       autoload: 'all'
     petsc:
       suffixes:

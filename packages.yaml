@@ -17,7 +17,7 @@ packages:
   all:
     compiler: [gcc, intel]
     providers:
-      mpi: [mpich]
+      mpi: [openmpi]
   python:
     paths:
       python@2.7.5: /usr
@@ -50,11 +50,15 @@ packages:
     paths:
       lua@5.1.4: /usr
       buildable: False
-  bzip2:
-    paths:
-      bzip2@1.0.6: /usr
-      buildable: False
   slurm:
     paths:
       slurm@17.02.11: /usr
+      buildable: False
+  ucx:
+    paths:
+      ucx@system: /usr
+      buildable: False
+  openmpi:
+    paths:
+      openmpi@4.0.1: /gpfs/u//software/erp-rhel7/openmpi/4.0.1
       buildable: False
