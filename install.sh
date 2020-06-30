@@ -9,3 +9,4 @@ spack install libconfig@1.7.1%gcc@7.4.0 ^/lw3xgcu ^/7c5liqe
 spack install netcdf-cxx4@4.3.0%gcc@7.4.0 ^/lw3xgcu ^/n4jkbet ^netcdf@4.5.0
 spack install thrust@1.8.2%gcc@7.4.0
 spack install boost@1.61.0%gcc@7.4.0
+spack install hpctoolkit ^/b5b3rid ^/iub3alb ^xz@5.2.4
