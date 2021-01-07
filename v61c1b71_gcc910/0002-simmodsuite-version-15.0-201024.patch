@@ -1,0 +1,58 @@
+From 1dd8aab981b0a5f12f718033318909522a203690 Mon Sep 17 00:00:00 2001
+From: Cameron Smith <smithc11@rpi.edu>
+Date: Wed, 6 Jan 2021 10:07:29 -0500
+Subject: [PATCH 2/3] simmodsuite: version 15.0-201024
+
+---
+ .../packages/simmetrix-simmodsuite/package.py      | 35 ++++++++++++++++++++++
+ 1 file changed, 35 insertions(+)
+
+diff --git a/var/spack/repos/builtin/packages/simmetrix-simmodsuite/package.py b/var/spack/repos/builtin/packages/simmetrix-simmodsuite/package.py
+index b2a2002..a1b1acf 100644
+--- a/var/spack/repos/builtin/packages/simmetrix-simmodsuite/package.py
++++ b/var/spack/repos/builtin/packages/simmetrix-simmodsuite/package.py
+@@ -10,6 +10,41 @@
+ def simmodsuite_releases():
+     releases = [
+         {
++            'version': '15.0-201024',
++            'components': {
++               'msparalleladapt': ['8324063e0b380bcb943d6aeeb6aef06c66301ad62aeccc893ae70235976d0b82', 'paralleladapt'],
++               'msadv': ['9a922c6f17ea1bc7e8652e29bbddfb7a733aee5ddc7ba5f974f18e1ad6ff3498', 'adv'],
++               'psint': ['0a8224b9acad31a6374b5f7ee0d0a8b1726547a62eedefe71751cabbbfd11ec4', 'parasolid'],
++               'msadapt': ['8f9359efe80ea5e0e8c7c7a97fcd42288ca515ed380c108360690a5ae618e000', 'base'],
++               'gmvoxel': ['461286f53d3cf6cd1c6f2d0b2929ea64d93b53c3848944ab173aaf1e8e302f26', 'voxel'],
++               'fdcore': ['88338af2b4c1129496aca01745effd77f546330a95b7596503b814309edb3d78', 'base'],
++               'mscore': ['5cba49f1aa7a17150b40ae336db86cfec8363038a972f1221ac1726ef3fb407d', 'base'],
++               'discrete': ['2b996edb79cc6638c958d1710233f1dd1cc248194818075be476078d91cc8ede', 'discrete'],
++               'aciskrnl': ['70c5568dbe4b3bb4516b2183807db43bdc35700919b2d830751a511f4c02c6a2', 'acis'],
++               'msparallelmesh': ['12d42bb6ed74c074f77cffa55965f86034d3cb9676c5f831c04faf3d14c17f05', 'parallelmesh'],
++               'gmcore': ['6ec0b9ec216c1f46d35ecb0352023581d3ab48f93ac747df15831dc8335dfa32', 'base'],
++               'pskrnl': ['2025666147e5f5edcee44d7f66cf068579cca5be453b12d2ec295f655ec24c6c', 'parasolid'],
++               'gmabstract': ['7bda23e451309c7a27e06814ae0de6455ca36dac73cc0c2ed5ad158b991285ad', 'abstract'],
++               'gmadv': ['803ae8ac785078cc1d123e89ef2b6e3bc5fb8ebc6eb9e00435e9ff2666bbd583', 'advmodel'],
++            },
++            'docs': {
++               'MeshSimAdvanced': ['a9c374ff4a49c2786828e5d314fcc049ac442679a1abdca95e45191f87cf48bd', 'adv'],
++               'MeshSimAdapt': ['cd7adcdef3e104d5407372ee34e631f7fdd569d2dbdd437a21f52c7ff204d130', 'base'],
++               'GeomSimAdvanced': ['35ec6063bf336b0537de71914c31a7ce3b41512b40256541bb722f0f873e7791', 'advmodel'],
++               'FieldSim': ['861df6f04fefd8d667c6250f9a6441314c2e337de1fff6de0aa0e7a3e5d8a52d', 'base'],
++               'ParallelMeshSimAdapt': ['838f78573f2439ce32029c49c55c5551184b826dce11951b662776fdc2e45873', 'paralleladapt'],
++               'MeshSim': ['f0efa2c402cc6847d1cfe2be3aebad4c3b19e7bdd240056e412226eeb08baa98', 'base'],
++               'GeomSimParasolid': ['b37ba23f5ab54de824db1698d44b906ae015c283709e765d231526bee6af6743', 'parasolid'],
++               'GeomSim': ['c2daa872b529a4d95e9be0c266db362008b1acb27c2f29b90ef5ac75ff296d46', 'base'],
++               'GeomSimDiscrete': ['69529bf020fc1136d0a0be78201da76af66dcdc4fd8fedbc92d7a565d71648ec', 'discrete'],
++               'GeomSimAbstract': ['065b85a40214a6d6ed0267da9b592ea7c5c1271c5ced360bc1b84b8410356277', 'abstract'],
++               'GeomSimAcis': ['935636750e43fd06cef25548bc0b2ee0f413c50ea8d5ad5cd568df80ca565620', 'acis'],
++               'GeomSimVoxel': ['5db0965b03c6fa1bff762b01c21e8e0859f89042e0643ed427fb641a301922a3', 'voxel'],
++               'ParallelMeshSim': ['1e6c5de51425a1941005f0f1cb05ea97d432baf90b8c3c84a696aa5332e388fa', 'parallelmesh'],
++               'GeomSimDiscreteModeling': ['14f691e9e6ce8d65d150a9984cc65a227f118f0ad20f710b0145d4043155b8d3', 'discrete'],
++            }
++        },
++        {
+             'version': '14.0-191122',
+             'components': {
+                 'gmadv': ['01cea5f7aff5e442ea544df054969740ad33e2ff4097cf02de31874d16a0c7c2', 'advmodel'],
+-- 
+1.8.3.1
+
