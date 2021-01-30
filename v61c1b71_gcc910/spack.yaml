@@ -30,7 +30,7 @@ spack:
       providers: {}
     mfem:
       version: []
-      variants: +metis +pumi +examples
+      variants: +metis +pumi +examples +superlu-dist
       target: []
       compiler: []
       buildable: true
