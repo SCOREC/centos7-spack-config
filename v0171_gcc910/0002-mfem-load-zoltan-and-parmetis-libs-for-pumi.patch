@@ -1,0 +1,27 @@
+From 8feb9eb1286fc18d8f32012083d0b6bb7659c9d7 Mon Sep 17 00:00:00 2001
+From: Cameron Smith <smithc11@rpi.edu>
+Date: Wed, 6 Jan 2021 11:16:30 -0500
+Subject: [PATCH 2/2] mfem: load zoltan and parmetis libs for pumi
+
+---
+ var/spack/repos/builtin/packages/mfem/package.py | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/var/spack/repos/builtin/packages/mfem/package.py b/var/spack/repos/builtin/packages/mfem/package.py
+index 616db65..985b730 100644
+--- a/var/spack/repos/builtin/packages/mfem/package.py
++++ b/var/spack/repos/builtin/packages/mfem/package.py
+@@ -598,6 +598,10 @@ def find_optional_library(name, prefix):
+         if '+pumi' in spec:
+             pumi_libs = ['pumi', 'crv', 'ma', 'mds', 'apf', 'pcu', 'gmi',
+                          'parma', 'lion', 'mth', 'apf_zoltan', 'spr']
++            if '+zoltan' in spec['pumi']:
++              pumi_libs += ['zoltan']
++              if '+parmetis' in spec['zoltan']:
++                pumi_libs += ['parmetis']
+             options += [
+                 'PUMI_OPT=-I%s' % spec['pumi'].prefix.include,
+                 'PUMI_LIB=%s' %
+-- 
+1.8.3.1
+

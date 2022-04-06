@@ -1,0 +1,61 @@
+From e96b59a419444fd4b00fe2a16172dd0edb8d6852 Mon Sep 17 00:00:00 2001
+From: Cameron Smith <smithc11@rpi.edu>
+Date: Wed, 6 Apr 2022 13:11:48 -0400
+Subject: [PATCH 1/2] sim: add 17.0-220403dev
+
+---
+ .../packages/simmetrix-simmodsuite/package.py      | 38 ++++++++++++++++++++++
+ 1 file changed, 38 insertions(+)
+
+diff --git a/var/spack/repos/builtin/packages/simmetrix-simmodsuite/package.py b/var/spack/repos/builtin/packages/simmetrix-simmodsuite/package.py
+index 801f95f..8a2929f 100644
+--- a/var/spack/repos/builtin/packages/simmetrix-simmodsuite/package.py
++++ b/var/spack/repos/builtin/packages/simmetrix-simmodsuite/package.py
+@@ -11,6 +11,44 @@
+ def simmodsuite_releases():
+     releases = [
+         {
++            'version': '17.0-220403dev',
++            'components': {
++               'aciskrnl': ['a3b47ea8f9525655703f2f1afa2db9ee3243c9c67f259c8c368e0b44d9b077bf', 'acis'],
++               'fdcore': ['405fd7abf040e77a882a5bdc29244468a7e8cdd3038e60336a7b96c759a5fa80', 'base'],
++               'msadv': ['5cfe87ced8d5bf72512661723f81c1bb9d7c57925ef60c0bd016635d17a2da25', 'adv'],
++               'msparallelmesh': ['1421bb9efdb251fd54fcc6df64ad448fa68baac59b15ff4e179db0e728a0e5f1', 'parallelmesh'],
++               'gmadv': ['b3fae07ba3b10f64d8f2b9c02e2b3a5a88058afdb439afd6fb4f8c4f0993229e', 'advmodel'],
++               'msparalleladapt': ['600b14287009692aff75a7ae07d39b39520a45061f17a5e6800e39ba9a682c5c', 'paralleladapt'],
++               'pskrnl': ['6cb506badc1e5ee24a85974e7803cc23c46e7cb24bdba1cdb2fbf7b6105dce74', 'parasolid'],
++               'gmcore': ['c2a2b350893dc1b4c33fb170863a727ac1bdb98420479887e617224cab81bf2a', 'base'],
++               'gmabstract': ['dc447055f796ef1a0aa6b0ada58ca52ace0ddcea51041e6f991440e3b9a2ec7a', 'abstract'],
++               'mscore': ['d8b17b238d7d007b4f3a1e0f5700b4dbbfa348adc24315b1579e65ad8b0e0adc', 'base'],
++               'opencascade': ['bc34ce9e9d14e90c412719b19f0c43b132f5e2ca3fd9a672f9d9935bae4f430d', 'opencascade'],
++               'msadapt': ['c3b0cf6ff9b69ca7198cfab70c7de4d8c7f773f367eaaaa55e38b06d739afc3b', 'base'],
++               'gmvoxel': ['fb6fa0fd6e6cddf56d25695562780b0e8403bb80adc38845ed3d1ccf65a8df2e', 'voxel'],
++               'discrete': ['58986d440ec7f8cf939fa7d0a3a078a4b4ec22155ea9e3a607bc3e245f282777', 'discrete'],
++               'psint': ['b456dffe6b5e37c99673b9481642d910f2c7703c5cc5247881ea98d6ca14ed42', 'parasolid'],
++            },
++            'docs': {
++               'FieldSim': ['c4ed4ef72dacc0acf6394a65dec8bfa7e3029502244bc5f135adc662699efa23', 'base'],
++               'ParallelMeshSim': ['dc3991464bb80176a0f0113f128363569c59313fd8ee6ac8eeb488a479ddebef', 'parallelmesh'],
++               'GeomSim': ['4ea39458efc44a54a32863d03ae74da13d291b3ca7308a7e20d2d1dc9af103ae', 'base'],
++               'GeomSimAbstract': ['36b5bb936747412bef94d576ab59843ac30cb2ea90f89549b2a98e224d5d45ec', 'abstract'],
++               'GeomSimDiscrete': ['4f6137a6828b71bd61aac11993038f91a26451336c1618ab96863509c0eb9875', 'discrete'],
++               'MeshSim': ['84f9f0fb9c83cc01b2891abac59a68539041efbf7a743f8da58539bf110a2fa6', 'base'],
++               'MeshSimAdapt': ['0b9c622e28963b1f354bb9c38a473bffc89368d2f417628c0ad8e9a4750ae7ce', 'base'],
++               'ParallelMeshSimAdapt': ['ad2bfd94887dc8bc70c26782a7e755b3fa2ed05d151b7839d851db9cf0ffac23', 'paralleladapt'],
++               'GeomSimVoxel': ['b10abb7c1b793a823d14e5ff1b9766d05034a1b526f0a763e20ffc5f667dacf5', 'voxel'],
++               'GeomSimGranite': ['60118d98c7df7c5cbeda8d31e2c3062ad0a3a4e45781b4b5082bf3800e5f4576', 'granite'],
++               'GeomSimAcis': ['86e776578678923e6fe963dd800a4e2281350e28fd67c65879df6b9f795ad034', 'acis'],
++               'MeshSimAdvanced': ['aec7d3526a9eea7e1a0322a620dc29f16b4967cb240f512bb5775c179d133db5', 'adv'],
++               'GeomSimParasolid': ['1eafd78273ca8793f31e20db393b762eb6a091ec3e8fb63bd9cb81eee752f99d', 'parasolid'],
++               'GeomSimOpenCascade': ['768b22f956f429d0cea9a47ab039d39a9409f498d4ea2e3f60cd766aa9953c30', 'opencascade'],
++               'GeomSimDiscreteModeling': ['5984a323d649c6d267f308a6f21be97ff1db341ffe1fe28d6afc58d93f92009f', 'discrete'],
++               'GeomSimAdvanced': ['41962705f4e32667aa3168ed9d41a14a59469d309460311233b822d410bfa1d0', 'advmodel'],
++            }
++        },
++        {
+             'version': '16.0-210623',
+             'components': {
+                 'gmadv': ['c40dac44695db6e97c4d4c06d1eb6eac93518c93d7860c77a69f3ea30fea3b90', 'advmodel'],
+-- 
+1.8.3.1
+
