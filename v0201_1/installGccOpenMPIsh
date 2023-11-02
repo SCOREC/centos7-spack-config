@@ -1,0 +1,9 @@
+#!/bin/bash
+coreGcc="gcc@4.8.5"
+spack add gcc@13.1.0 +binutils %$coreGcc
+spack concretize
+spack install --fail-fast
+spack compiler add $(spack location -i gcc@13.1.0)
+spack add openmpi@4.0.1 +pmi fabrics=verbs schedulers=slurm %gcc@13.1.0
+spack concretize #this was failing with permission error, had to create a directory manually...
+spack install --fail-fast
